@@ -1,0 +1,514 @@
+{
+    "questions":[
+        {
+            "question": "O que você deve fazer se vir lixo na praia?",
+            "options": ["A) Ignorar e continuar a diversão.",
+                        "B) Jogar mais lixo para que ninguém perceba.",
+                        "C) Recolher o lixo e colocar na lixeira.",
+                        "D) Deixar para o vento levar."],
+            "correct_option": "C"
+        },
+        {
+            "question": "Qual é um animal que vive nos recifes de corais?",
+            "options": ["A) Elefante.",
+                        "B) Tubarão.",
+                        "C) Pinguim.",
+                        "D) Gato."],
+            "correct_option": "B"
+        },
+        {
+            "question": "O que você deve fazer se vir lixo na praia?",
+            "options": [
+                "A) Ignorar e continuar a diversão.",
+                "B) Jogar mais lixo para que ninguém perceba.",
+                "C) Recolher o lixo e colocar na lixeira.",
+                "D) Deixar para o vento levar."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "O que é um microplástico?",
+            "options": [
+                "A) Um tipo de peixe.",
+                "B) Um pedaço de plástico muito pequeno.",
+                "C) Um tipo de comida.",
+                "D) Uma planta marinha."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Por que as tartarugas marinhas são importantes?",
+            "options": [
+                "A) Elas só nadam e não fazem mais nada.",
+                "B) Elas ajudam a manter o equilíbrio do ecossistema marinho.",
+                "C) Elas vivem apenas em rios.",
+                "D) Elas são rápidas demais para serem estudadas."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Como a poluição pode afetar a nossa saúde?",
+            "options": [
+                "A) Fazendo com que os peixes fiquem mais saborosos.",
+                "B) Contaminando os alimentos que comemos.",
+                "C) Aumentando a beleza das praias.",
+                "D) Tornando o ar mais fresco."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "O que você pode fazer para ajudar os oceanos?",
+            "options": [
+                "A) Usar menos plástico no dia a dia.",
+                "B) Jogar lixo no mar para 'ajudar' a limpeza.",
+                "C) Comprar mais produtos que vêm em plástico.",
+                "D) Ignorar a poluição, pois não é problema meu."
+            ],
+            "correct_option": "A"
+        },
+        {
+            "question": "O que acontece com os peixes que comem plástico?",
+            "options": [
+                "A) Eles ficam mais saudáveis.",
+                "B) Podem adoecer e morrer.",
+                "C) Eles se tornam maiores.",
+                "D) Eles ficam mais coloridos."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Como a água do mar ajuda a regular o clima?",
+            "options": [
+                "A) Ela não tem efeito no clima.",
+                "B) Absorvendo o calor e o dióxido de carbono.",
+                "C) Apenas deixando a água fria.",
+                "D) Fazendo com que chova mais."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Por que os recifes de corais são chamados de 'florestas tropicais do mar'?",
+            "options": [
+                "A) Porque têm muitas árvores.",
+                "B) Porque são lar de uma grande variedade de vida marinha.",
+                "C) Porque são encontrados apenas em lugares quentes.",
+                "D) Porque são coloridos como flores."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "O que pode acontecer se continuarmos a poluir os oceanos?",
+            "options": [
+                "A) Nada; os oceanos sempre vão estar limpos.",
+                "B) Os peixes e outros animais marinhos podem desaparecer.",
+                "C) As praias vão ficar mais bonitas.",
+                "D) O clima vai ficar melhor."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Sabendo que existem várias formas de poluição nas praias, cite três delas.",
+            "options": [
+                "a) Poluição pelo petróleo, pela irresponsabilidade humana e pelos microsplásticos.",
+                "b) Poluição através da conscientização das pessoas sobre a poluição nas praias, desmatamento e microplásticos.",
+                "c) Poluição através dos raios solares."
+            ],
+            "correct_option": "a"
+        },
+        {
+            "question": "Qual deles é um poluente das praias?",
+            "options": [
+                "a) Plásticos.",
+                "b) Madeira.",
+                "c) Papel."
+            ],
+            "correct_option": "a"
+        },
+        {
+            "question": "Quais as consequências que a poluição traz para a economia do local?",
+            "options": [
+                "a) A poluição traz problemas para o turismo e para a venda dos comerciantes do local.",
+                "b) Os comerciantes locais lucram mais, pois os turistas preferem comprar nas áreas mais poluídas, onde há menos concorrência.",
+                "c) A poluição ajuda no crescimento da economia local, já que o custo de manutenção das praias diminui."
+            ],
+            "correct_option": "a"
+        },
+        {
+            "question": "Por que os microplásticos são prejudiciais aos seres humanos e ao meio ambiente?",
+            "options": [
+                "a) Os microplásticos se compõem rapidamente no meio ambiente, sem causar impactos.",
+                "b) Os microplásticos ajudam a filtrar poluentes no oceano, tornando a água mais limpa.",
+                "c) São prejudiciais porque animais marinhos ou até mesmo as aves podem se alimentar dos microplásticos e, consequentemente, os humanos que se alimentarem dos peixes adquirem doenças."
+            ],
+            "correct_option": "c"
+        },
+        {
+            "question": "Como acontece o descarte de plásticos no oceano?",
+            "options": [
+                "a) Acontece pelo descarte adequado dos poluentes.",
+                "b) Acontece pela irresponsabilidade dos seres humanos por não saberem cuidar do bioma marinho, fazendo descarte inadequado do lixo.",
+                "c) Acontece pela responsabilidade dos seres humanos por saberem cuidar do bioma marinho, fazendo descarte inadequado do lixo."
+            ],
+            "correct_option": "b"
+        },
+        {
+            "question": "Além do prejuízo direto aos animais, a poluição das praias afeta diretamente os seres humanos. Explique:",
+            "options": [
+                "a) A presença de microplásticos na água do mar altera a temperatura do corpo humano, provocando febres crônicas em banhistas frequentes.",
+                "b) A poluição das praias favorece o crescimento econômico local, atraindo mais turistas interessados em ver os efeitos da degradação ambiental.",
+                "c) A poluição das praias afeta os humanos de forma que, quando deixamos plásticos jogados em qualquer lugar, pode acontecer de alguém pisar e acabar se ferindo."
+            ],
+            "correct_option": "c"
+        },
+        {
+            "question": "Quais das alternativas abaixo apresentam as ONGs que existem para limpar as praias?",
+            "options": [
+                "a) Projeto Ondas.",
+                "b) Beach Clean Up.",
+                "c) Instituto Reação."
+            ],
+            "correct_option": "b"
+        },
+        {
+            "question": "Sobre o descarte ilegal de lixo nas praias, qual das ações tomadas abaixo está correta?",
+            "options": [
+                "a) Caso eu ache lixo no chão da praia, meu dever é retirá-lo do local e colocar no chão ao lado das caixas de lixo.",
+                "b) Devo pegar e guardar no local adequado (caixa de lixo) para não se tornar prejudicial às praias.",
+                "c) Todo e qualquer lixo que eu achar no chão, devo colocar na água do mar."
+            ],
+            "correct_option": "b"
+        },
+        {
+            "question": "Se você ver uma ação de descarte ilegal de lixo, que atitude deve tomar?",
+            "options": [
+                "a) Não chamar a atenção do indivíduo para que não faça tal ação.",
+                "b) Ligar para o governador para que ele tome uma providência.",
+                "c) Chamar a atenção e explicar o porquê ele não deve fazer isso."
+            ],
+            "correct_option": "c"
+        },
+        {
+            "question": "Qual o animal que mais sofre pela poluição das praias?",
+            "options": [
+                "a) Tartarugas.",
+                "b) Baleias.",
+                "c) Golfinhos."
+            ],
+            "correct_option": "a"
+        },
+        {
+            "question": "O que é o bioma marinho?",
+            "options": [
+                "A) Um conjunto de desertos espalhados ao redor do mundo.",
+                "B) Um ambiente composto apenas por rios e lagos.",
+                "C) Um ecossistema encontrado apenas em ilhas tropicais.",
+                "D) Todos os ecossistemas que estão nos oceanos, mares e praias."
+            ],
+            "correct_option": "D"
+        },
+        {
+            "question": "Qual das alternativas NÃO é uma causa da poluição nas praias?",
+            "options": [
+                "A) O lixo deixado pelas pessoas.",
+                "B) O esgoto despejado no mar.",
+                "C) As correntes marítimas que trazem resíduos.",
+                "D) A presença de corais nos oceanos."
+            ],
+            "correct_option": "D"
+        },
+        {
+            "question": "Como a poluição afeta os animais marinhos?",
+            "options": [
+                "A) Eles conseguem se adaptar rapidamente ao lixo plástico.",
+                "B) Os animais utilizam os plásticos para construir seus ninhos.",
+                "C) Os animais marinhos ingerem lixo, o que pode causar asfixia ou fome.",
+                "D) O lixo no mar torna os peixes mais saudáveis e maiores."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "De onde vêm os microplásticos?",
+            "options": [
+                "A) São produzidos naturalmente pelo mar.",
+                "B) Derivam da decomposição de materiais orgânicos no oceano.",
+                "C) São formados pela quebra de grandes pedaços de plástico, como garrafas e sacolas.",
+                "D) Vêm apenas de vulcões subaquáticos."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "Se você fosse um peixe, o que poderia confundir com comida no mar?",
+            "options": [
+                "A) Um pedaço de coral.",
+                "B) Uma sacola plástica flutuando.",
+                "C) Um grão de areia.",
+                "D) Um raio de sol."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "O que você pode fazer para deixar a praia mais limpa durante uma visita?",
+            "options": [
+                "A) Jogar o lixo no mar para 'limpar' a areia.",
+                "B) Enterrar o lixo na areia.",
+                "C) Deixar o lixo para os pássaros comerem.",
+                "D) Colocar o lixo na lixeira ou levá-lo para casa."
+            ],
+            "correct_option": "D"
+        },
+        {
+            "question": "Qual desses itens se transforma em microplásticos no mar?",
+            "options": [
+                "A) Uma pedra jogada no mar.",
+                "B) Uma folha caída de uma árvore.",
+                "C) Uma garrafa plástica que se quebra ao longo do tempo.",
+                "D) Uma concha que fica na praia."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "O que um golfinho poderia pensar sobre uma garrafa plástica no oceano?",
+            "options": [
+                "A) É uma bola divertida para brincar!",
+                "B) Isso é comida!",
+                "C) Vou usar isso para construir uma casa!",
+                "D) Isso vai me ajudar a nadar mais rápido!"
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Qual seria uma forma divertida e criativa de ajudar a reduzir a poluição nas praias?",
+            "options": [
+                "A) Fazer um castelo de lixo na areia.",
+                "B) Organizar uma corrida para ver quem coleta mais lixo.",
+                "C) Usar o lixo como decoração na praia.",
+                "D) Jogar o lixo no mar para ver o que acontece."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Qual é uma boa prática para manter as praias limpas?",
+            "options": [
+                "A) Jogar lixo na areia.",
+                "B) Recolher seu lixo e levar para casa.",
+                "C) Ignorar o lixo que está no chão.",
+                "D) Fazer uma fogueira com materiais recicláveis."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Aonde que são encontrados apenas animais carnívoros.",
+            "options": [
+                "a) Região litorânea.",
+                "b) Região eufótica.",
+                "c) Região afótica",
+                "d) Região abissal.",
+                "e) Região continental."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "A região mais profunda, sem luz e com espécies adaptadas à grande pressão é chamada de:",
+            "options": [
+                "a) Zona litorânea.",
+                "b) Zona batial.",
+                "c) Zona nerítica.",
+                "d) Zona abissal",
+                "e) Zona entre marés."
+            ],
+            "correct_option": "D"
+        },
+        {
+            "question": "Por nadarem ativamente nos mares, os golfinhos são classificados como:",
+            "options": [
+                "a) bentos.",
+                "b) néctons",
+                "c) zooplânctons.",
+                "d) fitoplânctons."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": " Os elementos abaixo são considerados para a classificação de um bioma, com exceção do aspecto:",
+            "options": [
+                "a) hidrografia.",
+                "b) relevo.",
+                "c) vegetação.",
+                "d) clima.",
+                "e) tectonismo"
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "O bioma Tundra está geograficamente localizado em regiões:",
+            "options": [
+                "a) superiores à faixa temperada sul do planeta.",
+                "b) na faixa mais intertropical do planeta Terra.",
+                "c) ao longo da linha do Trópico de Capricórnio.",
+                "d) próximas ao extremo meridional do planeta.",
+                "e) de elevadas latitudes e próximas ao Polo Norte"
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Um exemplo da ocorrência de Savana no território brasileiro é o bioma:",
+            "options": [
+                "a) Caatinga.",
+                "b) Taiga.",
+                "c) Pampa.",
+                "d) Tundra.",
+                "e) Cerrado"
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Qual é formada por Floresta Tropical?",
+            "options": [
+                "a) patagônia",
+                "b) Deserto de Gobi",
+                "c) Floresta Amazônica",
+                "d) Deserto do Saara",
+                "e) Alpes"
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "Quais são os principais biomas marinhos?",
+            "options": [
+                "a) Oceanos profundos",
+                "b) Recifes de coral",
+                "c) Estuários",
+                "d) Mar aberto",
+                "e) Todas as alternativas acima."
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Quais são os principais biomas encontrados no litoral brasileiro?",
+            "options": [
+                "a) Floresta Amazônica",
+                "b) Restinga",
+                "c) Pantanal",
+                "d) Campos de Cerrado"
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Como as atividades humanas impactam os biomas de praia no Brasil?",
+            "options": [
+                "a) Aumento da biodiversidade",
+                "b) Erosão costeira",
+                "c) Recuperação de habitats",
+                "d) Proteção das espécies marinhas"
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Aonde que são encontrados apenas animais carnívoros.",
+            "options": [
+                "a) Região litorânea.",
+                "b) Região eufótica.",
+                "c) Região afótica.",
+                "d) Região abissal.",
+                "e) Região continental."
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "A região mais profunda, sem luz e com espécies adaptadas à grande pressão é chamada de:",
+            "options": [
+                "a) Zona litorânea.",
+                "b) Zona batial.",
+                "c) Zona nerítica.",
+                "d) Zona abissal.",
+                "e) Zona entre marés."
+            ],
+            "correct_option": "D"
+        },
+        {
+            "question": "Por nadarem ativamente nos mares, os golfinhos são classificados como:",
+            "options": [
+                "a) bentos.",
+                "b) néctons.",
+                "c) zooplânctons.",
+                "d) fitoplânctons."
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Os elementos abaixo são considerados para a classificação de um bioma, com exceção do aspecto:",
+            "options": [
+                "a) hidrografia.",
+                "b) relevo.",
+                "c) vegetação.",
+                "d) clima.",
+                "e) tectonismo."
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "O bioma Tundra está geograficamente localizado em regiões:",
+            "options": [
+                "a) superiores à faixa temperada sul do planeta.",
+                "b) na faixa mais intertropical do planeta Terra.",
+                "c) ao longo da linha do Trópico de Capricórnio.",
+                "d) próximas ao extremo meridional do planeta.",
+                "e) de elevadas latitudes e próximas ao Polo Norte."
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Um exemplo da ocorrência de Savana no território brasileiro é o bioma:",
+            "options": [
+                "a) Caatinga.",
+                "b) Taiga.",
+                "c) Pampa.",
+                "d) Tundra.",
+                "e) Cerrado."
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Qual é formada por Floresta Tropical?",
+            "options": [
+                "a) Patagônia",
+                "b) Deserto de Gobi",
+                "c) Floresta Amazônica.",
+                "d) Deserto do Saara",
+                "e) Alpes"
+            ],
+            "correct_option": "C"
+        },
+        {
+            "question": "Quais são os principais biomas marinhos?",
+            "options": [
+                "a) Oceanos profundos",
+                "b) Recifes de coral",
+                "c) Estuários",
+                "d) Mar aberto",
+                "e) Todas as alternativas acima."
+            ],
+            "correct_option": "E"
+        },
+        {
+            "question": "Quais são os principais biomas encontrados no litoral brasileiro?",
+            "options": [
+                "a) Floresta Amazônica",
+                "b) Restinga.",
+                "c) Pantanal",
+                "d) Campos de Cerrado"
+            ],
+            "correct_option": "B"
+        },
+        {
+            "question": "Como as atividades humanas impactam os biomas de praia no Brasil?",
+            "options": [
+                "a) Aumento da biodiversidade",
+                "b) Erosão costeira.",
+                "c) Recuperação de habitats",
+                "d) Proteção das espécies marinhas"
+            ],
+            "correct_option": "B"
+        }
+    ]
+}
