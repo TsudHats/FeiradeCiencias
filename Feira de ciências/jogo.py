@@ -79,30 +79,6 @@ def rola_dado():  # Define o método para rolar o dado
 def desenhar_player(player):  # Define o método para desenhar o player no tabuleiro
     pygame.draw.circle(tela, player.color, player.posição, 20)
 
-def quebra_texto(texto, font, largura_max):
-    """Divide o texto em várias linhas com base na largura máxima."""
-    palavras = texto.split(' ')
-    linhas = []
-    linha_atual = ""
-
-    for palavra in palavras:
-        # Adiciona a palavra atual à linha
-        teste_linha = linha_atual + palavra + ' '
-        largura_linha, _ = font.size(teste_linha)
-        
-        # Se a linha atual for muito longa, adiciona a linha atual à lista de linhas e começa uma nova
-        if largura_linha > largura_max:
-            linhas.append(linha_atual.strip())
-            linha_atual = palavra + ' '  # Começa uma nova linha
-        else:
-            linha_atual = teste_linha  # Continua na mesma linha
-
-    # Adiciona a última linha, se existir
-    if linha_atual:
-        linhas.append(linha_atual.strip())
-
-    return linhas
-
 def desenhar_texto(texto, x, y, tamanho=30, cor=(255,255,255)):
     fonte = pygame.font.Font(None, tamanho)
     texto_renderizado = fonte.render(texto, True, cor)
@@ -124,115 +100,105 @@ dado_resultado = 0  # Armazena o resultado do dado
 pergunta = None  # Armazena a pergunta atual
 seleção_escolhida = None  # Armazena a seleção feita pelo jogador
 mensagem_erro = ""  # Mensagem de erro a ser exibida
-pergunta_atual = None
-opçoes_atual = []
-
-# Casas que irão ter uma pergunta
-casas_perguntas = {1, 4, 5, 9, 11, 12, 16, 17, 20, 22, 28, 30, 32, 34, 37, 44,
-                   47, 48, 50, 51, 52, 53, 54, 55, 56, 59, 60, 61, 63,
-                   68, 70, 72, 75, 77, 79, 80, 82, 85}
-random.shuffle(questions)
-
-indice_pergunta_atual = 0
-
-
-def escolher_nova_pergunta():
-    global pergunta_atual
-    pergunta_atual = random.choice(questions)
-    
-def verificar_resposta(resposta_usuario):
-    global pergunta_atual
-    if resposta_usuario == pergunta_atual['correta']:
-        print("Correto!")
-    else:
-        print("Incorreto!")
-    # Escolhe uma nova pergunta independente do resultado
-    escolher_nova_pergunta()
-
-def verificar_pergunta(casa_do_jogador):
-    global indice_pergunta_atual
-    if casa_do_jogador in casas_perguntas and indice_pergunta_atual < len(questions):
-        # Retorna a pergunta atual e incrementa o índice para a próxima pergunta
-        pergunta = questions[indice_pergunta_atual]
-        indice_pergunta_atual += 1
-        return pergunta
-    else:
-        return ''
-
-def verificar_resposta(pergunta, resposta_selecionada):
-    """
-    Verifica se a resposta selecionada está correta.
-    
-    :param pergunta: Dicionário contendo a pergunta e as respostas.
-    :param resposta_selecionada: Resposta escolhida pelo jogador.
-    :return: True se a resposta estiver correta, False caso contrário.
-    """
-    return resposta_selecionada == pergunta['correct_option']
 
 font = pygame.font.SysFont(None, 48)  # Define a fonte do jogo
-casa_do_jogador = 1
 
 
-def mover_jogador(dados_rolados):
-    global casa_do_jogador, pergunta_atual, opcoes_atual
-    casa_do_jogador += dados_rolados  # Atualiza a posição com base no resultado do dado
-    if casa_do_jogador >= len(path):  # Garante que o jogador não ultrapasse o caminho
-        casa_do_jogador = len(path) - 1  # Ajusta para a última casa se exceder
-    pergunta_atual = verificar_pergunta(casa_do_jogador)  # Verifica se há pergunta na casa
-    if pergunta_atual:  # Se há pergunta, pega as opções
-        opcoes_atual = pergunta_atual['options']
-
-
-
-mover_jogador(dado_rolado)
-
-def desenhar_opcoes(options, x, y, color):  # Desenha as opções das perguntas
-    for i, option in enumerate(options):
-        desenhar_texto(option, x, y + i * 40, tamanho=40, cor=color)
-
-def selecionar_resposta(pergunta, selecao):
-    if 'correct_option' in pergunta:
-        return pergunta['correct_option'] == selecao
-    else:
-        print("A pergunta não contém a chave 'correct_answer'.")
-        return False  # ou outra lógica que você desejar
+def desenhar_opcoes(opcoes, x, y, tamanho_fonte=40, largura_max=700, cor=(0, 0, 0)):
+    """
+    Desenha as opções de resposta com quebra de linha, ajustando o espaçamento entre linhas e opções.
+    
+    :param opcoes: Lista de opções a serem desenhadas.
+    :param x: Posição X para começar a desenhar.
+    :param y: Posição Y inicial para desenhar.
+    :param tamanho_fonte: Tamanho da fonte das opções.
+    :param largura_max: Largura máxima permitida para cada linha.
+    :param cor: Cor do texto.
+    """
+    fonte = pygame.font.Font(None, tamanho_fonte)
+    opcoes_quebradas = quebra_texto_opcoes(opcoes, fonte, largura_max)
+    
+    espaco_entre_opcoes = tamanho_fonte + 35  # Espaço extra entre cada opção
+    espaco_entre_linhas = tamanho_fonte + -15   # Espaço entre as linhas de cada opção
+    
+    for i, linhas in enumerate(opcoes_quebradas):
+        y_opcao = y + i * espaco_entre_opcoes  # Calcula a posição inicial Y para cada opção
+        for j, linha in enumerate(linhas):
+            superficie_texto = fonte.render(linha, True, cor)
+            tela.blit(superficie_texto, (x, y_opcao + j * espaco_entre_linhas))  # Ajusta o espaçamento entre linhas dentro da opção
 
 
 cor_verde = (0,255,0)
 cor_vermelho = (255,0,0)
 
 
+
+def quebra_texto(texto, fonte, largura_max):
+    palavras = texto.split()
+    linhas = []
+    linha_atual = ""
+
+    for palavra in palavras:
+        if fonte.size(linha_atual + palavra)[0] <= largura_max:
+            linha_atual += palavra + " "
+        else:
+            linhas.append(linha_atual.strip())
+            linha_atual = palavra + " "
+    
+    linhas.append(linha_atual.strip())
+    return linhas
+
+def desenhar_texto_multilinha(texto, x, y, tamanho_fonte, largura_max, cor=(0, 0, 0)):
+    fonte = pygame.font.Font(None, tamanho_fonte)
+    linhas = quebra_texto(texto, fonte, largura_max)
+    for i, linha in enumerate(linhas):
+        superficie_texto = fonte.render(linha, True, cor)
+        tela.blit(superficie_texto, (x, y + i * (tamanho_fonte + 5)))  # Ajusta o espaçamento entre linhas
+        
+        
+def quebra_texto_opcoes(opcoes, fonte, largura_max):
+    """
+    Divide as opções em múltiplas linhas, se necessário, com base na largura máxima.
+    
+    :param opcoes: Lista de opções (strings) a serem quebradas.
+    :param fonte: Fonte a ser utilizada para renderizar o texto.
+    :param largura_max: Largura máxima permitida para cada linha.
+    :return: Lista de listas, onde cada sublista contém as linhas para uma opção.
+    """
+    opcoes_quebradas = []
+    
+    for opcao in opcoes:
+        palavras = opcao.split()
+        linhas = []
+        linha_atual = ""
+
+        for palavra in palavras:
+            if fonte.size(linha_atual + palavra)[0] <= largura_max:
+                linha_atual += palavra + " "
+            else:
+                linhas.append(linha_atual.strip())
+                linha_atual = palavra + " "
+        
+        linhas.append(linha_atual.strip())
+        opcoes_quebradas.append(linhas)
+
+    return opcoes_quebradas
+
+fim = len(path) - 1
+        
 # Loop principal do jogo
 while True:
     for event in pygame.event.get():  # Captura eventos do Pygame
         if event.type == pygame.QUIT:  # Verifica se o evento é de saída
             pygame.quit()
             sys.exit()  # Sai do jogo
+            
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 pygame.quit()
                 sys.exit()
-            if event.key == pygame.K_RETURN:  # Verifica se a tecla Enter foi pressionada
-                if resposta_dada:  # Se a resposta já foi dada, avança para o próximo jogador
-                    current_player_index = (current_player_index + 1) % len(players)
-                    dado_rolado = False
-                    resposta_dada = False
-                    pergunta_atual = None  # Reseta a pergunta
-                    opcoes_atual = []  # Reseta as opções
-                    casa_do_jogador = players[current_player_index].index  # Mantenha a casa atual
-                elif not dado_rolado:  # Se o dado não foi rolado
-                    dado_resultado = rola_dado()  # Rola o dado
-                    dado_rolado = True  # Marca que o dado foi rolado
-                    players[current_player_index].move(dado_resultado, path)  # Move o jogador
-                    mover_jogador(dado_resultado)  # Atualiza a casa e a pergunta após o movimento
-                    if players[current_player_index].index in casas_perguntas:
-                        pergunta_atual = verificar_pergunta(players[current_player_index].index)  # Verifica pergunta para a casa atual
-                        if pergunta_atual:  # Se houver uma pergunta, define as opções
-                            opcoes_atual = pergunta_atual['options']
-                        
-                        
-            if not resposta_dada:  # Se a resposta ainda não foi dada
-                # Verifica qual tecla foi pressionada para selecionar a resposta
+            
+            if not resposta_dada:
                 if event.key == pygame.K_1:
                     seleção_escolhida = "A"
                 elif event.key == pygame.K_2:
@@ -241,30 +207,40 @@ while True:
                     seleção_escolhida = "C"
                 elif event.key == pygame.K_4:
                     seleção_escolhida = "D"
-                elif event.key == pygame.K_5:
-                    seleção_escolhida = "E"
-
-                # Verifica se a seleção escolhida está correta
+            
                 if seleção_escolhida:
-                    if seleção_escolhida == pergunta_atual['correct_option']:  # Verifica se a resposta é a correta
-                        resposta_dada = True  # A resposta foi dada corretamente
-                        mensagem_erro = "Resposta Correta!"
-                        cor_mensagem = cor_verde
+                    if seleção_escolhida == pergunta["correct_option"]:
+                        resposta_dada = True
+                        dado_rolado = False
+                        mensagem_erro = "Resposta correta! Pressione Espaço para rolar o dado"
                     else:
-                        resposta_dada = False  # Mantém a pergunta para o próximo jogador
-                        mensagem_erro = f"Resposta Incorreta! {players[current_player_index].nome} mudando para o próximo jogador..."
-                        current_player_index = (current_player_index + 1) % len(players)  # Passa para o próximo jogador
-                        cor_mensagem = cor_vermelho
+                        resposta_dada = True
+                        mensagem_erro = f"Resposta errada! {players[current_player_index].nome} mudando para o próximo jogador"
+                        current_player_index = (current_player_index + 1) % len(players)
+                        pergunta = random.choice(questions)
+                        mensagem_erro = ""
+                        resposta_dada = False
+                        
             
             elif resposta_dada and not dado_rolado and event.key == pygame.K_SPACE:
-                dado_resultado = rola_dado()  # Rola o dado
-                dado_rolado = True  # Define que o dado foi rolado
+                if mensagem_erro == "Resposta correta! Pressione Espaço para rolar o dado":
+                    current_player_index = (current_player_index + 1) % len(players)
+                    players[current_player_index].move(dado_resultado, path)
+                    dado_resultado = rola_dado()
+                    dado_rolado = True
+                    mensagem_erro = ""
                 
-        if event.type == pygame.MOUSEBUTTONDOWN and dado_rolado:  # Se o mouse for clicado e o dado foi rolado
-            players[current_player_index].move(dado_resultado, path)  # Move o jogador atual
-            resposta_dada = False  # Reseta a resposta dada
-            dado_rolado = False  # Reseta o estado do dado
-            current_player_index = (current_player_index + 1) % len(players)  # Muda para o próximo jogador
+        if event.type == pygame.MOUSEBUTTONDOWN and dado_rolado:
+            players[current_player_index].move(dado_resultado, path)
+            resposta_dada = False
+            dado_rolado = False
+            mensagem_erro = ""  # Limpa a mensagem de erro para o próximo turno
+            pergunta = random.choice(questions)  # Escolhe uma nova pergunta
+            current_player_index = (current_player_index + 1) % len(players)
+            
+
+
+    # (restante do loop permanece igual)
 
 
     for player in players:
@@ -278,32 +254,29 @@ while True:
     for player in players:
         desenhar_player(player)
 
-    if pergunta_atual:
-        desenhar_texto(pergunta_atual['question'], 150, 250, 40, (255, 255, 255))
-        desenhar_opcoes(opcoes_atual, 150, 500, 40)
-
     # Exibe a pergunta e as opções, se existir
-    if resposta_dada and seleção_escolhida:
-        resposta_correta = verificar_resposta(pergunta_atual, seleção_escolhida)
-        if resposta_correta:
-            mensagem_erro = "Resposta Correta!"
-        else:
-            mensagem_erro = "Resposta Errada!"  
+    if not resposta_dada:
+        pergunta = random.choice(questions) if pergunta is None else pergunta
+        seleção_escolhida = None
+        
+    if pergunta:
+        desenhar_texto_multilinha(pergunta["question"], 130, 220, 40, 700)  # Define a largura máxima para 700 pixels
+        desenhar_opcoes(pergunta["options"], 115, 500, 40)
 
         if dado_rolado:
-            desenhar_texto(f"Dado parou em: {dado_resultado}", 150, 370, 40, (0,0,0)) # Exibe a mensagem de erro
-            desenhar_texto("Clique para mover.", 150, 400, 40, (0,0,0))
+            desenhar_texto(f"Dado parou em: {dado_resultado}, Clique do mouse para mover", 150, 450, 40, (0,0,0))
 
-        # Mostrar jogador atual
-        desenhar_texto(f"{players[current_player_index].nome} é o jogador atual", 200, 1000) # Exibe mensagem de erro
 
-        # Mostrar mensagem de erro, se houver
+        desenhar_texto(f"{players[current_player_index].nome} é o jogador atual", 250, 1000, 50, (0,0,0))
+
         if mensagem_erro:
-            desenhar_texto(mensagem_erro, 150, 450, 40, cor_mensagem)
+            if mensagem_erro == "Resposta correta! Pressione Espaço para rolar o dado":
+                desenhar_texto(mensagem_erro, 150, 450, 40, (0,0,0))
+            elif mensagem_erro == f"Resposta errada! {players[current_player_index].nome} mudando para o próximo jogador":
+                desenhar_texto(mensagem_erro, 50, 450, 40, (0,0,0))
 
-    # Desenhar todos os jogadores na tela
     for player in players:
-        desenhar_player(player) # Desenha cada jogador no tabuleiro
+        desenhar_player(player)
 
     pygame.display.flip()
 
