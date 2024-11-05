@@ -158,7 +158,7 @@ cor_vermelho = (255,0,0)
 
 
 
-def quebra_texto(texto, fonte, largura_max):
+def quebra_texto(texto, fonte, largura_max): # Limite da largura para os textos na tela
     palavras = texto.split()
     linhas = []
     linha_atual = ""
