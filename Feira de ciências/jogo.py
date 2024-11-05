@@ -3,11 +3,36 @@ import pygame  # Biblioteca para criação de jogos 2D em python
 import sys  # Biblioteca para manipular a saída do sistema
 import random  # Biblioteca para randomizar números
 import json  # Biblioteca para utilizar arquivos JSON
-import textwrap
+import os
 
 # Inicializa o Pygame
 pygame.init()
 
+# Define o caminho para os arquivos
+if getattr(sys, 'frozen', False):
+    # Quando o script está sendo executado como um executável
+    base_path = sys._MEIPASS
+else:
+    # Quando o script está sendo executado como um arquivo Python
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
+# Define os caminhos dos arquivos
+perguntas_file = os.path.join(base_path, 'perguntas.json')  # Caminho correto
+tabuleiro_image = os.path.join(base_path, 'tabuleiro.jpeg')  # Caminho correto
+
+# Carregando arquivos
+try:
+    with open(perguntas_file) as f:
+        perguntas = json.load(f)  # Carrega o JSON corretamente
+except FileNotFoundError:
+    print(f"Arquivo não encontrado: {perguntas_file}")
+
+try:
+    tabuleiro_img = pygame.image.load(tabuleiro_image)  # Usando o caminho dinâmico
+except FileNotFoundError:
+    print(f"Arquivo não encontrado: {tabuleiro_image}")
+
+# Aqui você pode adicionar o restante do seu código para o jogo
 largura, altura = 1920, 1080  # Define a dimensão da tela
 tela = pygame.display.set_mode((largura, altura))  # Cria a tela com as dimensiões anteriores
 pygame.display.set_caption("Jogo da Tabuleiro - Perguntas e Respostas - Biomas Marítimos")  # Define o título do jogo
@@ -86,9 +111,9 @@ def desenhar_texto(texto, x, y, tamanho=30, cor=(255,255,255)):
 
 # Define os players
 player1 = Player('Jogador 1', (0, 0, 0), path[0])  # Cria o jogador 1
-player2 = Player('Jogador 2', (255, 0, 0), path[0])  # Cria o jogador 2
+player2 = Player('Jogador 2', (160, 32, 240), path[0])  # Cria o jogador 2
 player3 = Player('Jogador 3', (0, 255, 0), path[0])  # Cria o jogador 3
-player4 = Player('Jogador 4', (0, 0, 255), path[0])  # Cria o jogador 4
+player4 = Player('Jogador 4', (255, 255, 0), path[0])  # Cria o jogador 4
 
 players = [player1, player2, player3, player4]
 current_player_index = 0  # Índice do jogador atual
@@ -280,4 +305,3 @@ while True:
 
     pygame.display.flip()
 
-pygame.quit()

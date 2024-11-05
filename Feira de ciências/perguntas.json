@@ -110,10 +110,10 @@
             "question": "Sabendo que existem várias formas de poluição nas praias, cite três delas.",
             "options": [
                 "a) Poluição pelo petróleo, pela irresponsabilidade humana e pelos microsplásticos.",
-                "b) Poluição através da conscientização das pessoas sobre a poluição nas praias, desmatamento e microplásticos.",
-                "c) Poluição através dos raios solares."
+                "b) Poluição através dos raios solares.",
+                "c) Poluição através da conscientização das pessoas sobre a poluição nas praias, desmatamento e microplásticos."
             ],
-            "correct_option": "a"
+            "correct_option": "A"
         },
         {
             "question": "Qual deles é um poluente das praias?",
@@ -122,7 +122,7 @@
                 "b) Madeira.",
                 "c) Papel."
             ],
-            "correct_option": "a"
+            "correct_option": "A"
         },
         {
             "question": "Quais as consequências que a poluição traz para a economia do local?",
@@ -131,7 +131,7 @@
                 "b) Os comerciantes locais lucram mais, pois os turistas preferem comprar nas áreas mais poluídas, onde há menos concorrência.",
                 "c) A poluição ajuda no crescimento da economia local, já que o custo de manutenção das praias diminui."
             ],
-            "correct_option": "a"
+            "correct_option": "A"
         },
         {
             "question": "Por que os microplásticos são prejudiciais aos seres humanos e ao meio ambiente?",
@@ -140,7 +140,7 @@
                 "b) Os microplásticos ajudam a filtrar poluentes no oceano, tornando a água mais limpa.",
                 "c) São prejudiciais porque animais marinhos ou até mesmo as aves podem se alimentar dos microplásticos e, consequentemente, os humanos que se alimentarem dos peixes adquirem doenças."
             ],
-            "correct_option": "c"
+            "correct_option": "C"
         },
         {
             "question": "Como acontece o descarte de plásticos no oceano?",
@@ -149,16 +149,7 @@
                 "b) Acontece pela irresponsabilidade dos seres humanos por não saberem cuidar do bioma marinho, fazendo descarte inadequado do lixo.",
                 "c) Acontece pela responsabilidade dos seres humanos por saberem cuidar do bioma marinho, fazendo descarte inadequado do lixo."
             ],
-            "correct_option": "b"
-        },
-        {
-            "question": "Além do prejuízo direto aos animais, a poluição das praias afeta diretamente os seres humanos. Explique:",
-            "options": [
-                "a) A presença de microplásticos na água do mar altera a temperatura do corpo humano, provocando febres crônicas em banhistas frequentes.",
-                "b) A poluição das praias favorece o crescimento econômico local, atraindo mais turistas interessados em ver os efeitos da degradação ambiental.",
-                "c) A poluição das praias afeta os humanos de forma que, quando deixamos plásticos jogados em qualquer lugar, pode acontecer de alguém pisar e acabar se ferindo."
-            ],
-            "correct_option": "c"
+            "correct_option": "B"
         },
         {
             "question": "Quais das alternativas abaixo apresentam as ONGs que existem para limpar as praias?",
@@ -167,7 +158,7 @@
                 "b) Beach Clean Up.",
                 "c) Instituto Reação."
             ],
-            "correct_option": "b"
+            "correct_option": "B"
         },
         {
             "question": "Sobre o descarte ilegal de lixo nas praias, qual das ações tomadas abaixo está correta?",
@@ -176,7 +167,7 @@
                 "b) Devo pegar e guardar no local adequado (caixa de lixo) para não se tornar prejudicial às praias.",
                 "c) Todo e qualquer lixo que eu achar no chão, devo colocar na água do mar."
             ],
-            "correct_option": "b"
+            "correct_option": "B"
         },
         {
             "question": "Se você ver uma ação de descarte ilegal de lixo, que atitude deve tomar?",
@@ -185,7 +176,7 @@
                 "b) Ligar para o governador para que ele tome uma providência.",
                 "c) Chamar a atenção e explicar o porquê ele não deve fazer isso."
             ],
-            "correct_option": "c"
+            "correct_option": "C"
         },
         {
             "question": "Qual o animal que mais sofre pela poluição das praias?",
@@ -194,7 +185,7 @@
                 "b) Baleias.",
                 "c) Golfinhos."
             ],
-            "correct_option": "a"
+            "correct_option": "A"
         },
         {
             "question": "O que é o bioma marinho?",
